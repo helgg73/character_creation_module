@@ -1,5 +1,9 @@
 from random import randint
 
+# Из модуля start_game_banner, который расположен в папке graphic_arts,
+# импортируем функцию run_screensaver().
+from graphic_arts.start_game_banner import run_screensaver
+
 
 def attack(char_name: str, char_class: str) -> str:
     damage: int = 0
@@ -90,7 +94,8 @@ def choice_char_class() -> str:
     return char_class
 
 
-def main():
+def main() -> None:
+    run_screensaver()
     print('Приветствую тебя, искатель приключений!')
     print('Прежде чем начать игру...')
     char_name: str = input('...назови себя: ')
